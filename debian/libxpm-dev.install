@@ -1,0 +1,5 @@
+usr/include/X11/*
+usr/lib/libXpm.a
+usr/lib/libXpm.so
+usr/lib/libXpm.la
+usr/lib/pkgconfig/xpm.pc

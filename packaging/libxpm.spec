@@ -1,8 +1,8 @@
 
-Name:       libXpm
+Name:       libxpm
 Summary:    X.Org X11 libXpm runtime library
 Version:    3.5.9
-Release:    1
+Release:    2.7
 Group:      System/Libraries
 License:    MIT
 URL:        http://www.x.org/
@@ -15,7 +15,7 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xau)
 BuildRequires:  pkgconfig(xt)
-BuildRequires:  gettext
+BuildRequires:  gettext-tools
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-build
 
@@ -37,9 +37,8 @@ Description: %{summary}
 
 
 %build
-
-%reconfigure \
-	LDFLAGS="-Wl,--hash-style=both -Wl,--as-needed"
+export LDFLAGS+=" -Wl,--hash-style=both -Wl,--as-needed"
+%reconfigure
 
 # Call make instruction with smp support
 make %{?jobs:-j%jobs}

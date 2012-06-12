@@ -3,7 +3,7 @@ Name:       libxpm
 Summary:    X.Org X11 libXpm runtime library
 Version:    3.5.9
 Release:    2.7
-Group:      System/Libraries
+Group:      Graphics/X Window System
 License:    MIT
 URL:        http://www.x.org/
 Source0:    http://xorg.freedesktop.org/releases/individual/lib/%{name}-%{version}.tar.gz
@@ -34,7 +34,7 @@ Description: %{summary}
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 
 %build
@@ -78,6 +78,5 @@ rm -rf %{buildroot}
 %{_includedir}/X11/xpm.h
 %{_libdir}/libXpm.so
 %{_libdir}/pkgconfig/xpm.pc
-#%dir %{_mandir}/man1x
 %doc %{_mandir}/man1/*.1*
 

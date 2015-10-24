@@ -1,6 +1,6 @@
 Summary: X.Org X11 libXpm runtime library
 Name: libXpm
-Version: 3.5.10
+Version: 3.5.11
 Release: 1
 License: MIT
 Group: System Environment/Libraries
@@ -53,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 /usr/share/license/%{name}
-%doc AUTHORS COPYING ChangeLog
+%doc AUTHORS COPYING
 %{_libdir}/libXpm.so.4
 %{_libdir}/libXpm.so.4.11.0
 
